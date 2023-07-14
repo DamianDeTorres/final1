@@ -1,0 +1,697 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    width: 100%;
+}
+.encabezado {
+    width: 100%;
+    position:initial;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.primeraFila {
+    width: 100%;
+    height: 3em;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.redes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.icono {
+    width: 20%;
+    background-color: black;
+    margin: .7em 1em;
+}
+
+.publicidad h1 {
+    color: white;
+    font-family: 'Shantell Sans', cursive;
+    font-size: 1em;
+}
+
+@media screen and (max-width: 400px){
+    .publicidad h1 {
+    font-size:10px;
+    }
+    }
+.sectorDerecho{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.carrito {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.segundaFila {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+.nombre {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+.nombre a {
+    justify-content: center;
+    width: 100%;
+    text-decoration: none;
+}
+.nombre img {
+    width: 60%;
+}
+.menuFijo {
+    width: 100%;
+}
+#opcionesMenu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-height: 50px;
+}
+#opcionesMenu a {
+    color: black;
+    text-decoration: none;
+}
+
+.listaDesplegable {
+    width: 100%;
+    height: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 1em;
+    visibility: hidden;
+    opacity: 0;
+}
+#desplegar {
+    height: 40px;
+}
+#desplegable {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    visibility: hidden;
+    opacity: 0;
+}
+#desplegable a {
+    color: black;
+    text-decoration: none;
+}
+.opciones a:hover h1 {
+    transform: scale(1.1);
+    transition: .9s;
+}
+.opciones {
+    margin: 4px 1px;
+    text-align: center;
+}
+#sucursal {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.primFilaSuc {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.iconoSucursal {
+    position: relative;
+    top : 14px;
+}
+#iconoSucursal:hover {
+    transform: scale(1.5);
+    transition: .9s;
+    cursor: pointer;
+}
+#sucursales {
+    position: relative;
+    width: 300px;
+    padding: 30px 0;
+    background-color: white;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: 2s;
+}
+@media screen and (max-width: 710px){
+    #sucursales {
+        width: 0;
+    }
+    .menuFijo {
+        width: 0;
+    }
+    }
+.sucursales .opcionSuc h1 {
+    font-family: 'Golos Text', sans-serif;
+    font-weight: 200;
+    text-align: start;
+    margin-left: 30px;
+}
+#sucursalCba {
+    transition: 2s;
+}
+#sucursalVCP {
+    transition: 2s;
+}
+#sucursalAG {
+    transition: 2s;
+}
+.opciones h1 {
+    font-family: 'Shantell Sans', cursive;
+    font-size: 30px;
+    margin: 0.3em 0.3em;
+}
+@media screen and (max-width: 710px){
+    .listaDesplegable {
+    visibility: visible;
+    opacity: 1;
+    }
+    #opcionesMenu {
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+}
+.opciones h1 {
+    font-size: 14px;
+}
+    }
+#contraer {
+    position: relative;
+    left: -35px;
+    top: -10px;
+    visibility: hidden;
+    opacity: 0;
+}
+.carouselPrinc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 550px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+@media screen and (max-width: 400px){
+    .carouselPrinc {
+        width: 0;
+        height: 0;
+        margin-bottom: 0;
+    }
+    }
+.carousel {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.images {
+    width: 100%;
+    display: flex;
+    transform: translateY(0);
+    transition: transform 1s ease-in-out;
+}
+.images img {
+    height: 90%;
+    width: 100%;
+
+}
+
+#tipoClientes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.tarjeta {
+    display: inline-block;
+    width: 400px;
+    min-width: 300px;
+    margin: 3em 2em;
+    overflow: hidden;
+}
+.tarjeta:hover {
+    -webkit-box-shadow:0px 0px 113px 8px rgba(46,46,46,0.55);
+    -moz-box-shadow: 0px 0px 113px 8px rgba(46,46,46,0.55);
+    box-shadow: 0px 0px 113px 8px rgba(46,46,46,0.55);
+    border-radius: 20px;
+}
+.tarjeta img {
+    width: 100%;
+}
+.tarjeta img:hover {
+    transform: scale(1.5);
+    transition: 1.9s;
+}
+.txtTarjeta {
+    font-family: 'Shantell Sans', cursive;
+    font-size: 2em;
+    position: absolute;
+    color: white;
+    margin: 1em 1em;
+    opacity: .5;
+    z-index: 1000;
+}
+@media screen and (max-width: 400px){
+    .tarjeta {
+        width: 300px;
+    }
+    }
+.suscripcion {
+    width: 100%;
+    height: 120px;
+    background-color: black;
+}
+.contenSusc {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.contenSusc h2 {
+    font-family: 'Golos Text', sans-serif;
+    font-size: 16px;
+    color: white;
+    margin-bottom: 10px;
+}
+.contenSusc p {
+    font-family: 'Shantell Sans', cursive;
+    font-size: 12px;
+    color: white;
+    margin-bottom: 15px;
+}
+.contenSusc form {
+    width: 100%;
+    max-width: 250px;
+    display: flex;
+}
+.contenSusc form .campo{
+    width: 100%;
+    padding: 15px 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 3px 0px 0px 3px;
+    outline: 0px;
+}
+.contenSusc form .botSusc{
+    padding: 15px 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 0px 3px 3px 0px;
+    outline: 0px;
+    background: green;
+    color: white;
+    cursor: pointer;
+}
+@media screen and (max-width: 400px){
+    .suscripcion {
+        width: 300px;
+    }
+    }
+
+.sectorTextos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.tarjetaMixta {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 95%;
+    margin: 10px 0;
+}
+
+.txtIzquierda {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 40%;
+    min-width: 250px;
+    max-height: 800px;
+}
+.txtDerecha {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 40%;
+    min-width: 250px;
+    max-height: 800px;
+}
+.imgDerecha {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    width: 45%;
+}
+.imgDerecha img {
+    width: 100%;
+    margin: auto;
+    min-width: 200px;
+    border-radius: 20px 20px 20px 20px;
+}
+.imgIzquierda {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    width: 45%;
+}
+.imgIzquierda img {
+    width: 100%;
+    margin: auto;
+    min-width: 200px;
+    border-radius: 20px 20px 20px 20px;
+}
+.tarjetaMixta img {
+    width: 60%;
+}
+
+.filaUno {
+    font-family: 'Golos Text', sans-serif;
+    text-align: start;
+    font-size: 2em;
+    width: 100%;
+    margin: 2px;
+}
+.filaDos {
+    font-family: 'Shantell Sans', cursive;
+    text-align: center;
+    font-size: 1.5em;
+    width: 100%;
+    margin: 2px;
+}
+.filaTres {
+    font-family: 'Caveat', cursive;
+    text-align: end;
+    padding-right: 50px;
+    font-size: 1.5em;
+    width: 100%;
+    margin: 2px;
+}
+.filaCuatro {
+    font-family: 'Caveat', cursive;
+    text-align: end;
+    font-size: 2em;
+    width: 100%;
+    margin: 2px;
+}
+.filaCinco {
+    font-family: 'Golos Text', sans-serif;
+    padding-left: 10px;
+    text-align: start;
+    font-size: 1em;
+    width: 100%;
+    margin: 2px;
+}
+.filaSeis {
+    font-family: 'Shantell Sans', cursive;
+    text-align: center;
+    font-size: 2em;
+    width: 100%;
+    margin: 2px;
+}
+.filaFUno {
+    font-family: 'Caveat', cursive;
+    padding-left: 10px;
+    text-align: start;
+    font-size: 1.5em;
+    width: 100%;
+    margin: 2px;
+}
+.filaFDos {
+    font-family: 'Caveat', cursive;
+    text-align: end;
+    font-size: 1.5em;
+    width: 100%;
+    margin: 2px;
+}
+@media screen and (max-width: 400px){
+    .txtDerecha {
+        align-content: center;
+        margin: 0;
+    }
+    .txtDerecha h1 {
+        font-size: 16px;
+    }
+    .txtIzquierda h1 {
+        font-size: 16px;
+    }
+    .txtIzquierda {
+        align-content: center;
+        margin: 0;
+    }
+    .imgDerecha {
+        min-width: 400px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .imgIzquierda {
+        visibility: hidden;
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }}
+.titOfertas {
+    width: 100%;
+    height: 60px;
+    margin-bottom: 20px;
+    text-align: start;
+    margin-top: 10px;
+    margin-left: 8px;
+    border-top: solid;
+    color: black;
+}
+.titOfertas h1 {
+    font-family: 'Golos Text', sans-serif;
+    font-size: 24px;
+}
+.ofertas {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.tarjetaOfertas {
+    width: 20%;
+    max-height: 500px;
+    border: solid 3px;
+    border-radius: 5px;
+    color: black;
+    margin-bottom: 30px;
+    padding: 15px;
+}
+.tarjetaOfertas:hover {
+    -webkit-box-shadow:0px 0px 113px 2px rgba(46,46,46,0.55);
+    -moz-box-shadow: 0px 0px 113px 2px rgba(46,46,46,0.55);
+    box-shadow: 0px 0px 113px 2px rgba(46,46,46,0.55);
+    border-radius: 5px;
+}
+@media screen and (max-width: 400px){
+    .tarjetaOfertas {
+        width: 60%;
+    }}
+.marcoTarjetaOfertas {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    overflow: hidden;
+}
+.imgTarjetaOf {
+    height: 50%;
+}
+
+.imgTarjetaOf img {
+    width: 100%;
+    height: 100%;
+}
+.imgTarjetaOf:hover {
+    transform: scale(1.5);
+    transition: .9s;
+}
+.imgTarjetaOf h1 {
+    font-family: 'Shantell Sans', cursive;
+    font-size: 1em;
+    position: absolute;
+    color: black;
+    margin: 6em 3.5em;
+    opacity: .5;
+    z-index: 1000;
+}
+.txtTarjetaOf {
+    text-align: center;
+}
+.txtTarjetaOf h2 { 
+    font-family: 'Golos Text', sans-serif;
+    font-size: 1em;
+    color: black;
+}
+.txtTarjetaOf h1 { 
+    font-family: 'Golos Text', sans-serif;
+    font-size: 1.3em;
+    color: black;
+}
+.txtTarjetaOf:hover { 
+    cursor: pointer;
+}
+#imgPrinc1 {
+    width: 100%;
+    height: 100%;
+}
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    background-color: black;
+}
+.menuFoot {
+    width: 40%;
+    height: 300px;
+    margin: 10px;
+}
+.opcionesFoot {
+    width: 40%;
+}
+.redesFoot {
+    width: 10%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.opcionFoot {
+    text-decoration: none;
+}
+.footer a:hover {
+    font-size: 1.1em;
+    transition: .9s;
+}
+.opcionFoot h1 {
+    font-family: 'Golos Text', sans-serif;
+    color: white;
+    font-size: 1em;
+    margin: 5px;
+    padding: 3px;
+}
+.tituloFoot {
+    font-family: 'Shantell Sans', cursive;
+    color: white;
+    font-size: 1.5em;
+    font-weight: 900;
+    padding: 2px 30px;
+}
+.derechosAutor {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    font-size: .4em;
+}
+.derechosAutor h1 {
+    color: blueviolet;
+}
+.iconoFoot {
+    margin: 10px;
+}
+
+#sucursalCordoba {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    margin-bottom: 30px;
+}
+#sucursalCarlosPaz {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    margin-bottom: 30px;
+}
+#sucursalAltaGracia {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.titSucursal {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.titSucursal h1{
+    font-family: 'Golos Text', sans-serif;
+    font-size: 2em;
+}
+.direccionSucursal {
+    align-content: center;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 25px;
+}
+.direccionSucursal h2{
+    font-family: 'Shantell Sans', cursive;
+    font-size: 1em;
+}
+
+.mapaSucursal iframe {
+    width: 100%;
+    height: 200px;
+}
+@media screen and (max-width: 400px){
+    .mapaSucursal iframe{
+        width: 100%;
+    }
+    .direccionSucursal h2{
+        font-family: 'Shantell Sans', cursive;
+        font-size: 12px;
+    }
+    }
